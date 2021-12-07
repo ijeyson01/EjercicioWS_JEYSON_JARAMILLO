@@ -71,9 +71,19 @@ public class Data_WS extends AppCompatActivity {
                                     String dataT = jsonObject.getString("id");
                                     String dataN = jsonObject.getString("name");
                                     String dataE = jsonObject.getString("email");
+                                    String dataG = jsonObject.getString("gender");
+                                    String dataA = jsonObject.getString("status");
+                                    String activo ="";
+                                    if (dataA == "inactive"){
+                                        activo = "No";
+                                    }else{
+                                        activo = "Si";
+                                    }
                                     textView.append("id : " + dataT + "\n");
                                     textView.append("Nombre : " + dataN + "\n");
                                     textView.append("Email : " + dataE + "\n");
+                                    textView.append("Género : " + dataG + "\n");
+                                    textView.append("Activo : " + activo + "\n");
                                     textView.append("\n\n");
                                 }
                                 }catch (JSONException ex){
